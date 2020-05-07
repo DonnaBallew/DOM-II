@@ -14,3 +14,19 @@ window.addEventListener("keyup", () => {
   newText.style.color = "#212529";
   newText.style.fontSize = "4rem";
 });
+
+//Event 3 & 4 - MOUSEOVER & MOUSEOUT
+document.querySelectorAll(".nav a").forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.style.color = "white";
+    element.style.backgroundColor = "#17a2b8";
+    element.style.padding = "1rem";
+  });
+});
+
+document.querySelectorAll(".nav a").forEach((element) => {
+  element.addEventListener("mouseout", () => {
+    element.style.color = "";
+    element.style.backgroundColor = "";
+  });
+});
