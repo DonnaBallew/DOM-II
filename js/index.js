@@ -1,6 +1,6 @@
 // Your code goes here
 
-//Event 1 & 2 - KEY UP & KEY DOWN
+//Event 1 & 2 -> KEY UP & KEY DOWN
 const newText = document.querySelector(".logo-heading");
 
 window.addEventListener("keydown", () => {
@@ -15,7 +15,7 @@ window.addEventListener("keyup", () => {
   newText.style.fontSize = "4rem";
 });
 
-//Event 3 & 4 - MOUSEOVER & MOUSEOUT
+//Event 3 & 4 -> MOUSEOVER & MOUSEOUT
 document.querySelectorAll(".nav a").forEach((element) => {
   element.addEventListener("mouseover", () => {
     element.style.color = "white";
@@ -29,4 +29,10 @@ document.querySelectorAll(".nav a").forEach((element) => {
     element.style.color = "";
     element.style.backgroundColor = "";
   });
+});
+
+//Event 5 - > DBLCLICK
+const changeImage = document.querySelector("dblclick", () => {
+  changeImage.src = "img/volkswagen.jpg";
+  changeImage.alt = "A blue die-cast volkswagen";
 });
