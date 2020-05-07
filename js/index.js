@@ -126,8 +126,14 @@ document.querySelectorAll(".btn").forEach((btn) => {
 
 //STOP REFRESH
 const stop = document.querySelectorAll(".nav a");
+
 stop.forEach((event) => {
   event.addEventListener("click", (event) => {
     event.preventDefault();
   });
+});
+
+//STRETCH
+newText.addEventListener("click", () => {
+  TweenMax.to(newText, { duration: 3, rotationY: 360 });
 });
