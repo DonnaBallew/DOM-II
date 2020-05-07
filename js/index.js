@@ -65,3 +65,14 @@ window.addEventListener("resize", () => {
   resizeBody.style.backgroundColor = "#daf3f5";
   resizeHeader.style.backgroundColor = "#fcf2a4";
 });
+
+//Event 8 -> CLICK
+const pressBtn = document.querySelectorAll(".btn");
+
+pressBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.textContent = "Pack My Bags!";
+    element.style.border = "4px dotted orange";
+    element.style.transition = "all 2s";
+  });
+});
