@@ -94,6 +94,22 @@ newPointer.forEach((element) => {
   });
 });
 
+const contentImg = document.querySelectorAll(".img-content");
+
+contentImg.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    element.style.transform = "scale(1.1)";
+    element.style.transition = "all 0.3s";
+  });
+});
+
+contentImg.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    element.style.transform = "";
+    element.style.transition = "all 0.3s";
+  });
+});
+
 //PROPAGATION
 document.querySelectorAll(".destination").forEach((div) => {
   div.addEventListener("click", () => {
