@@ -93,3 +93,19 @@ newPointer.forEach((element) => {
     element.style.background = "";
   });
 });
+
+//PROPAGATION
+document.querySelectorAll(".destination").forEach((div) => {
+  div.addEventListener("click", () => {
+    div.style.backgroundColor = "#f5d6c1";
+  });
+});
+
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("I clicked on the button!");
+    event.stopPropagation();
+  });
+});
+
+//STOP REFRESH
