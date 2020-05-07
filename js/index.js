@@ -31,8 +31,37 @@ document.querySelectorAll(".nav a").forEach((element) => {
   });
 });
 
-//Event 5 - > DBLCLICK
-const changeImage = document.querySelector("dblclick", () => {
+//Event 5 -> DBLCLICK
+const changeImage = document.querySelector(".intro img");
+// console.log(changeImage);
+
+changeImage.addEventListener("dblclick", () => {
   changeImage.src = "img/volkswagen.jpg";
   changeImage.alt = "A blue die-cast volkswagen";
+});
+
+//Event 6 -> SCROLL
+document.addEventListener("scroll", () => {
+  document.querySelectorAll("h2").forEach((item) => {
+    item.style.color = "#4aa860";
+    item.style.fontSize = "5rem";
+  });
+});
+
+document.addEventListener("scroll", () => {
+  document.querySelectorAll("h4").forEach((item) => {
+    item.style.color = "#ec113b";
+  });
+});
+
+//Event 7 -> RESIZE
+window.addEventListener("resize", () => {
+  const cityBus = document.querySelector(".intro img");
+  const resizeBody = document.querySelector("body");
+  const resizeHeader = document.querySelector("header");
+
+  cityBus.src = "img/fun-bus-city.jpg";
+  cityBus.alt = "A yellow die-cast volkswagen in the city";
+  resizeBody.style.backgroundColor = "#daf3f5";
+  resizeHeader.style.backgroundColor = "#fcf2a4";
 });
